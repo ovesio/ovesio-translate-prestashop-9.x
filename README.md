@@ -83,13 +83,14 @@ From the AI Description Generator section:
 
 ### Step 1: Upload and Install the Module
 
-1. Download or clone this repository
-2. If you downloaded from GitHub, ensure the folder is named `ovesio`
-3. Upload the `ovesio` folder to your PrestaShop installation's `modules/` directory
-4. Navigate to **Modules > Module Manager** in your PrestaShop admin panel
-5. Search for "Ovesio AI" in the module list
-6. Click **Install** on the Ovesio AI Module
-7. After installation, click **Configure** to set up the module
+1.  **Download:** Download the zip archive called `ovesio.zip` from the [GitHub repository](https://github.com/ovesio/ovesio-translate-prestashop-9.x/releases) releases section.
+2.  **Upload:**
+    *   Log in to your PrestaShop Admin Panel (Back Office).
+    *   Navigate to **Improve** > **Modules** > **Module Manager**.
+    *   Click the **Upload a module** button.
+    *   Select or drag & drop the downloaded zip archive.
+    *   Click the **Install** button.
+    *   After installation, click the **Configure** button.
 
 ### Step 2: Configure the Module
 
@@ -233,7 +234,7 @@ For technical support or bug reports, please contact Ovesio support.
 
 ## Version
 
-Current version: 1.0.0
+Current version: 1.1.0
 
 ## Author
 

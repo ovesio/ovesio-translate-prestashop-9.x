@@ -1,0 +1,29 @@
+name: build-plugin-zip
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build zip with folder prefix
+        run: |
+          PLUGIN=ovesio
+          mkdir "$PLUGIN"
+          rsync -a ./ "$PLUGIN"/ --exclude '.git*' --exclude '.github'
+          zip -r "ovesio.zip" "$PLUGIN"
+
+      - name: Upload asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ovesio.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
